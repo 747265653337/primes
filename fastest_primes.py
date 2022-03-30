@@ -16,6 +16,5 @@ for primenumber in range(2, amount):
             prime_found = not (number % check == 0)
             if check > lim or not prime_found: break
     prime_list.append(number)
-print(prime_list[-3:])
 end_time = time.perf_counter() - start_time
 print(f'{end_time} seconds')
