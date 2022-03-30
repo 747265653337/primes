@@ -1,4 +1,4 @@
 
-#! not yet working
-prime_list = [number for number in range(2, int(input('amount:'))) if not any([(number % factor == 0)for factor in (prime_list if 'prime_list' in locals() else [2])])]
-print(prime_list)
+# * slowest algorithm ever written
+print([2]+[number for number in range(3, int(input('amount:')), 2) if not any([(number % factor == 0) for factor in range(3,round(number**0.5), 2)])])
+
