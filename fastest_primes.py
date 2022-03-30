@@ -12,13 +12,10 @@ for primenumber in range(2, amount):
     while not prime_found:
         number += 2
         lim = sqrt(number)
-        checking = True
-        pointer = 0
-        while checking:
-            check = prime_list[pointer]
-            pointer += 1
+        for check in prime_list:
             prime_found = not (number % check == 0)
-            checking = check <= lim and prime_found
+            if check > lim or not prime_found: break
     prime_list.append(number)
+print(prime_list[-3:])
 end_time = time.perf_counter() - start_time
 print(f'{end_time} seconds')
