@@ -14,5 +14,6 @@ for number in range(3, amount, 2):
     
 end = time.perf_counter() - start
 
+print(prime_list)
 print(len(prime_list))
 print(f'{end}seconds')
